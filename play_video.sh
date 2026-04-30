@@ -7,6 +7,8 @@ export DISPLAY=:0
 export XAUTHORITY=/home/pi/.Xauthority
 PLAYLIST="/home/pi/playlist.m3u"
 
+IP=$(hostname -I | awk '{print $1}')
+
 echo "$(date '+%H:%M:%S')"
 
 
@@ -14,7 +16,7 @@ echo "$(date '+%H:%M:%S')"
 curl -s \
   --form-string "token=abqnbzxtpf26gcbznvewn9p12wmv7o" \
   --form-string "user=utwc5pwgfvxk9qtmqrnzkghi95bxoo" \
-  --form-string "message=Filmpje is gestart" \
+  --form-string "message=Filmpje is gestart op $IP" \
   https://api.pushover.net/1/messages.json
 
 
