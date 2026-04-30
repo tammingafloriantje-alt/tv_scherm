@@ -1,0 +1,3 @@
+git clone git@github.com:tammingafloriantje-alt/tv_scherm.git
+curl https://rclone.org/install.sh | sudo bash
+rclone config
