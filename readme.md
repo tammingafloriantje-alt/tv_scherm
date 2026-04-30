@@ -41,9 +41,10 @@ Automatisch systeem voor het tonen van promotiemateriaal op een scherm via een R
 ---
 
 ### 👤 User crontab (video beheer)
-@reboot /home/pi/play_video.sh >> /home/pi/play_video_cron.log 2>&1
-0 */3 * * * /home/pi/stop_video.sh
-1 */3 * * * /home/pi/play_video.sh
+- @reboot /home/pi/play_video.sh >> /home/pi/play_video_cron.log 2>&1
+- 0 */3 * * * /home/pi/stop_video.sh
+- 1 */3 * * * /home/pi/play_video.sh
+- 0 3 * * * cd /home/pi/tv_scherm && /usr/bin/git pull origin main >> /home/pi/gitpull.log 2>&1
 
 
 **Gedrag:**
