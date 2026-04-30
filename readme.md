@@ -28,7 +28,7 @@ Automatisch systeem voor het tonen van promotiemateriaal op een scherm via een R
 ## ⏱️ Cronjobs
 
 ### 🔐 Sudo crontab (shutdown schema)
-'0 18 * * 1-5 /sbin/poweroff'
+- 0 18 * * 1-5 /sbin/poweroff
 - 0 12 * * 6 /sbin/poweroff
 - 0 6 * * 7 /sbin/poweroff
 
