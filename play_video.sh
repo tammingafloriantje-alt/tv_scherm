@@ -1,11 +1,11 @@
 #!/bin/bash
 
 REMOTE="onedrive:Hollandplant onedrive/Fotomateriaal/Fotos Hollandplant/Scherm"
-LOCAL="/home/pi/videos"
+LOCAL="$HOME/videos"
 
 export DISPLAY=:0
 export XAUTHORITY="$HOME/.Xauthority"
-PLAYLIST="/home/pi/playlist.m3u"
+PLAYLIST="$HOME/playlist.m3u"
 
 IP=$(hostname -I | awk '{print $1}')
 
