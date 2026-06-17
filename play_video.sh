@@ -4,7 +4,7 @@ REMOTE="onedrive:Hollandplant onedrive/Fotomateriaal/Fotos Hollandplant/Scherm"
 LOCAL="/home/pi/videos"
 
 export DISPLAY=:0
-export XAUTHORITY=/home/pi/.Xauthority
+export XAUTHORITY="$HOME/.Xauthority"
 PLAYLIST="/home/pi/playlist.m3u"
 
 IP=$(hostname -I | awk '{print $1}')
