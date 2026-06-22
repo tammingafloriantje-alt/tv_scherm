@@ -2,6 +2,22 @@
 
 REMOTE="onedrive:Hollandplant onedrive/Fotomateriaal/Fotos Hollandplant/Scherm"
 LOCAL="$HOME/videos"
+sleep 180
+
+# Logbestanden beperken tot maximaal 1000 regels
+find "$HOME" -type f -name "*.log" | while read -r logfile
+do
+    if [ -f "$logfile" ]; then
+        LINES=$(wc -l < "$logfile" 2>/dev/null)
+
+        if [ "$LINES" -gt 1000 ]; then
+            tail -n 1000 "$logfile" > "${logfile}.tmp"
+            mv "${logfile}.tmp" "$logfile"
+            echo "$(date '+%Y-%m-%d %H:%M:%S') Ingekort: $logfile ($LINES regels)"
+        fi
+    fi
+done
+
 
 export DISPLAY=:0
 export XAUTHORITY="$HOME/.Xauthority"
