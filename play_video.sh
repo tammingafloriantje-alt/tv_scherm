@@ -27,7 +27,7 @@ PLAYLIST="$HOME/playlist.m3u"
 CLICKUP_LIST_ID="901501857040"
 
 
-CLICKUP_TOKEN_FILE="pk_62455535_M8JYSUXE9W3NO2GD6W0WGGG9K2521E97"
+CLICKUP_TOKEN="pk_62455535_M8JYSUXE9W3NO2GD6W0WGGG9K2521E97"
 
 
 # ------------------------------------------------------------
@@ -46,7 +46,7 @@ log()
 
 log "Script gestart. 180 seconden wachten..."
 
-sleep 180
+#sleep 180
 
 
 # ------------------------------------------------------------
