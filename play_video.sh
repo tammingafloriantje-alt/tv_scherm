@@ -46,7 +46,7 @@ log()
 
 log "Script gestart. 180 seconden wachten..."
 
-#sleep 180
+sleep 180
 
 
 # ------------------------------------------------------------
