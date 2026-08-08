@@ -132,22 +132,6 @@ update_clickup()
     fi
 
 
-    # --------------------------------------------------------
-    # CLICKUP TOKEN LEZEN
-    # --------------------------------------------------------
-
-    if [ ! -f "$CLICKUP_TOKEN_FILE" ]; then
-        log "FOUT: ClickUp tokenbestand bestaat niet:"
-        log "$CLICKUP_TOKEN_FILE"
-        return
-    fi
-
-    CLICKUP_TOKEN=$(tr -d '\r\n' < "$CLICKUP_TOKEN_FILE")
-
-    if [ -z "$CLICKUP_TOKEN" ]; then
-        log "FOUT: ClickUp tokenbestand is leeg."
-        return
-    fi
 
 
     # --------------------------------------------------------
